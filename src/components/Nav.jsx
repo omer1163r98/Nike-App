@@ -2,8 +2,10 @@ import React, { useState } from 'react';
 import {headerLogo} from '../../assets/images'
 import {cart, hamburger, user} from '../../assets/icons'
 import { navLinks } from '../constants';
+import { NavLink, useNavigate } from 'react-router-dom';
 const Nav = () => {
     const [isHamburgerOpen, setIsHamburgerOpen] = useState(false)
+    const navigate = useNavigate()
     function renderNavItems (color) {
         return (
         navLinks.map((item) => (
@@ -38,8 +40,9 @@ const Nav = () => {
                 {renderNavItems()}
             </ul>
             <ul className='flex flex-row gap-10 justify-center items-center cursor-pointer'> 
-                <li><img width={22} src={user}/></li>
+                <li><img width={22} src={user} onClick={() => navigate('/login')}/></li>
                 <li><img width={22} src={cart}/></li>
+                
             </ul>
             <div className='hidden max-lg:block'>
                 <button onClick={() => setIsHamburgerOpen(!isHamburgerOpen)} >

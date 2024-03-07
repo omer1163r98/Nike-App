@@ -12,6 +12,7 @@ import truckFast from './truck-fast.svg'
 import twitter from './twitter.svg'
 import cart from './cart.png'
 import user from './user.png'
+import close from './close.png'
 
 export {
     arrowRight,
@@ -27,5 +28,6 @@ export {
     truckFast,
     twitter,
     cart,
-    user
+    user,
+    close
 }

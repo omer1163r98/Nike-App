@@ -8,10 +8,15 @@ import Services from './sections/Services'
 import SpecialOffer from './sections/SpecialOffer'
 import Subscribe from './sections/Subscribe'
 import SuperQuality from './sections/SuperQuality'
+import {Route, Routes} from 'react-router-dom'
+import Login from "./components/Login"
 
 const App =  () => {
-
   return ( 
+    <>
+    <Routes>
+      <Route path="/login" element={<Login></Login>}></Route>
+    </Routes>
     <main className='relative'>
       <Nav></Nav>
       <section className='xl:padding-l wide:padding-r padding-b '>
@@ -39,6 +44,7 @@ const App =  () => {
         <Footer></Footer>
       </section>
     </main>
+    </>
   )
 }
 
