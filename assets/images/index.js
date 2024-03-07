@@ -44,3 +44,4 @@ export {
     thumbnailShoe2,
     thumbnailShoe3
 }
+
