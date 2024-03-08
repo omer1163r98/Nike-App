@@ -2,9 +2,9 @@ import { facebook, instagram, shieldTick, support, truckFast, twitter } from "..
 import { bigShoe1, bigShoe2, bigShoe3, customer1, customer2, shoe4, shoe5, shoe6, shoe7, thumbnailShoe1, thumbnailShoe2, thumbnailShoe3 } from "../../assets/images";
 
 export const navLinks = [
-    { href: "#home", label: "Home" },
+    { href: "/", label: "Home" },
     { href: "#about-us", label: "About Us" },
-    { href: "#products", label: "Products" },
+    { href: "/products", label: "Products" },
     { href: "#contact-us", label: "Contact Us" },
 ];
 
@@ -31,12 +31,14 @@ export const statistics = [
 
 export const products = [
     {
+        id: 1,
         imgURL: shoe4,
         name: "Nike Air Jordan-01",
         price: "$200.20",
         rating: 4.3
     },
     {
+        id: 2,
         imgURL: shoe5,
         name: "Nike Air Jordan-10",
         price: "$210.20",
@@ -44,6 +46,7 @@ export const products = [
 
     },
     {
+        id: 3,
         imgURL: shoe6,
         name: "Nike Air Jordan-100",
         price: "$220.20",
@@ -51,12 +54,53 @@ export const products = [
 
     },
     {
+        id: 4,
         imgURL: shoe7,
         name: "Nike Air Jordan-001",
         price: "$230.20",
         rating: 4.7
 
     },
+    {
+        id: 5,
+        imgURL: shoe7,
+        name: "Nike Air Jordan-0221",
+        price: "$290.10",
+        rating: 4.1
+
+    },
+    {
+        id: 6,
+        imgURL: shoe7,
+        name: "Nike Pro Jordan",
+        price: "$221.36",
+        rating: 4.3
+
+    },
+    {
+        id: 7,
+        imgURL: shoe7,
+        name: "Nike Single-001",
+        price: "$170.20",
+        rating: 4.4
+
+    },
+    {
+        id: 8,
+        imgURL: shoe7,
+        name: "Nike Air 1",
+        price: "$200.00",
+        rating: 4.8
+
+    },
+    {
+        id: 9,
+        imgURL: shoe7,
+        name: "Nike Fleece",
+        price: "$140.00",
+        rating: 4.7
+
+    }
 ];
 
 export const services = [
@@ -130,4 +174,3 @@ export const socialMedia = [
     { src: instagram, alt: "instagram logo" },
 ];
 
-console.log('jskls')

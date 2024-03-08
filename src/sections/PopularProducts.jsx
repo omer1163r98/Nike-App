@@ -11,7 +11,7 @@ const PopularProducts = () => {
       </div>
 
       <div className='flex flex-row gap-10 justify-center mt-20'>
-        {products.map((product) => (
+        {products.slice(0, 4).map((product) => (
          <div>
           <ProductCard product={product}/>
          </div>

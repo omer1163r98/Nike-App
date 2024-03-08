@@ -10,15 +10,18 @@ import Subscribe from './sections/Subscribe'
 import SuperQuality from './sections/SuperQuality'
 import {Route, Routes} from 'react-router-dom'
 import Login from "./components/Login"
+import Products from "./sections/Products"
+import ProductDetails from "./sections/ProductDetails"
 
 const App =  () => {
   return ( 
     <>
+             <Nav></Nav>
+
     <Routes>
       <Route path="/login" element={<Login></Login>}></Route>
       <Route path="/" element = { (
          <main className='relative'>
-         <Nav></Nav>
          <section className='xl:padding-l wide:padding-r padding-b '>
          <Hero></Hero>
          </section>
@@ -45,6 +48,8 @@ const App =  () => {
          </section>
        </main>
       )}></Route>
+      <Route path="/products" element={<Products></Products>}></Route>
+      <Route path="/product-details/:id" element={<ProductDetails></ProductDetails>}></Route>
     </Routes>
    
     </>
