@@ -3,17 +3,17 @@ import {headerLogo} from '../../assets/images'
 import {cart, hamburger, user} from '../../assets/icons'
 import { navLinks } from '../constants';
 import { NavLink, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 const Nav = () => {
     const [isHamburgerOpen, setIsHamburgerOpen] = useState(false)
     const navigate = useNavigate()
     function renderNavItems (color) {
         return (
-        navLinks.map((item) => (
-            <li key={item.label}>
-                <a href={item.href} className='font-montserrat leading-normal text-md text-slate-gray' style={{color: color}}>
-                {item.label}
-                </a>
-            </li>
+        navLinks.map((link, index) => (
+                <li key={index}>
+                    <Link to={link.to}>{link.label}</Link>
+                </li>
+            
         )))
     }
     function openHamburger () {
@@ -41,7 +41,7 @@ const Nav = () => {
             </ul>
             <ul className='flex flex-row gap-10 justify-center items-center cursor-pointer'> 
                 <li><img width={22} src={user} onClick={() => navigate('/login')}/></li>
-                <li><img width={22} src={cart}/></li>
+                <li><img width={22} src={cart} onClick={() => navigate('/cart')}/></li>
                 
             </ul>
             <div className='hidden max-lg:block'>

@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from "react"
 import Hero from './sections/Hero'
 import Footer from './sections/Footer'
 import Nav from './components/Nav'
@@ -12,8 +12,10 @@ import {Route, Routes} from 'react-router-dom'
 import Login from "./components/Login"
 import Products from "./sections/Products"
 import ProductDetails from "./sections/ProductDetails"
+import Cart from "./sections/Cart"
 
 const App =  () => {
+  const [cartArray, setCartArray] = useState([])
   return ( 
     <>
              <Nav></Nav>
@@ -49,7 +51,8 @@ const App =  () => {
        </main>
       )}></Route>
       <Route path="/products" element={<Products></Products>}></Route>
-      <Route path="/product-details/:id" element={<ProductDetails></ProductDetails>}></Route>
+      <Route path="/product-details/:id" element={<ProductDetails array={cartArray} setArr = {setCartArray}></ProductDetails>}></Route>
+      <Route path="/cart" element={<Cart array={cartArray} setArr = {setCartArray}></Cart>}></Route>
     </Routes>
    
     </>
