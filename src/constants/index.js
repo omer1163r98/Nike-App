@@ -130,3 +130,4 @@ export const socialMedia = [
     { src: instagram, alt: "instagram logo" },
 ];
 
+console.log('jskls')
