@@ -13,6 +13,8 @@ import Login from "./components/Login"
 import Products from "./sections/Products"
 import ProductDetails from "./sections/ProductDetails"
 import Cart from "./sections/Cart"
+import AboutUs from "./AboutUs"
+import ContactUs from "./ContactUs"
 
 const App =  () => {
   const [cartArray, setCartArray] = useState([])
@@ -53,6 +55,8 @@ const App =  () => {
       <Route path="/products" element={<Products></Products>}></Route>
       <Route path="/product-details/:id" element={<ProductDetails array={cartArray} setArr = {setCartArray}></ProductDetails>}></Route>
       <Route path="/cart" element={<Cart array={cartArray} setArr = {setCartArray}></Cart>}></Route>
+      <Route path="/about-us" element={<AboutUs></AboutUs>}></Route>
+      <Route path="/contact-us" element={<ContactUs></ContactUs>}></Route>
     </Routes>
    
     </>

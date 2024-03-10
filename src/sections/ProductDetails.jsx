@@ -11,7 +11,12 @@ const ProductDetails = ({array , setArr}) => {
     const currentProduct = products.find(product => product.id === productId);
 
     function addToCart () {
-        array.push(currentProduct)
+        if (array.includes(currentProduct)){
+            alert('item already in cart. Please check your cart.')
+        }else{
+            array.push(currentProduct)
+
+        }
         console.log(array)
     }
   return (
